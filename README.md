@@ -1,4 +1,5 @@
-
+# Name: Purajith S
+# Register Number: 212223040158
 ## Ex 01 -Simple Web Server using Spring Boot
 
 ## AIM:
@@ -42,73 +43,73 @@ Stop the Spring Boot server once testing is complete.
 
 ## Program 
 
-simple-web-server/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com.example.demo/
-│       │       ├── DemoApplication.java
-│       │       └── HelloController.java
-│       └── resources/
-│           └── application.properties
-├── pom.xml
+<img width="651" height="527" alt="image" src="https://github.com/user-attachments/assets/a98ac0a9-e7ac-4f4f-925f-beb551c71c8f" />
 
  ### Pom.xml
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>ajw-exp-1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name/>
+	<description/>
+ <properties>
+	<java.version>21</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+		</dependency>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-    <groupId>com.example</groupId>
-    <artifactId>simple-web-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Simple Web Server</name>
-    <description>Demo project for Spring Boot Web Server</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.2</version>
-        <relativePath/>
-    </parent>
-
-    <dependencies>
-        <!-- Spring Boot Web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
+```
+### AjwExp1Application.java
 
-### DemoApplication.java
-
-package com.example.demo;
+```
+package com.example.ajw.exp_1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
+public class AjwExp1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AjwExp1Application.class, args);
+	}
+
 }
 
+```
 
 ### HelloController.java
-package com.example.demo;
+```
+package com.example.ajw.exp_1;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -121,15 +122,20 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 }
+```
 
 
 ### application.properties:
+```
+spring.application.name=ajw-exp-1
+server.port=8081
+```
 
- server.port=8081
+# Output:
+<img width="1025" height="640" alt="image" src="https://github.com/user-attachments/assets/a97a1739-4bd6-43f5-af63-e4c1cf5da8b7" />
 
 
-
-
-Output:
+# Result:
+Thus, the Simple Web Server was successfully developed using Spring Boot. The application was able to handle basic HTTP requests through RESTful endpoints and return appropriate responses for the requested URLs.
 
 
